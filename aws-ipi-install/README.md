@@ -1,8 +1,12 @@
 ```
-1. Download the installer from cloud.redhat.com
+Download the installer from cloud.redhat.com
+```
 
-2. ./openshift-install create install-config --dir=install
+```
+./openshift-install create install-config --dir=install
+```
 
-3. ./openshift-install create cluster --dir=install
+```
+./openshift-install create cluster --dir=install
 ```
 
