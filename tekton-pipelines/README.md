@@ -10,7 +10,7 @@ oc new-project vote-cicd
 ```
 
 ```
-oc apply -f oc apply -f 02-pipelineresources/
+oc apply -f 02-pipelineresources/
 pipelineresource.tekton.dev/vote-api-repo created
 pipelineresource.tekton.dev/vote-api-image created
 pipelineresource.tekton.dev/vote-ui-repo created

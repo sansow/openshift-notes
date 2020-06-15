@@ -53,7 +53,7 @@ Check logs
 ```
 Destroy Cluster
 
-openshift-install destroy cluster --dir {HOME}/aws-ipi-cluster
+./openshift-install destroy cluster --dir {HOME}/aws-ipi-cluster
 rm -rf $HOME/.kube
 rm -rf $HOME/aws-ipi-cluster
 ```
