@@ -1,4 +1,6 @@
-##Helper node
+```
+Helper Node
+```
 
 ```
 Copy the `vars-dhcp.yml` to root folder
