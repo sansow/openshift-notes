@@ -1,6 +1,6 @@
 ```
 Openshift version: 4.4.5
-Kubernetes Version: v1.16.2
+Kubernetes Version: v1.17.1
 ```
 
 ```
