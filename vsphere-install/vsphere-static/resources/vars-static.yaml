@@ -1,0 +1,30 @@
+---
+staticips: true
+helper:
+  name: "helper"
+  ipaddr: "192.168.0.150"
+dns:
+  domain: "example.com"
+  clusterid: "ocp4"
+  forwarder1: "8.8.8.8"
+  forwarder2: "8.8.4.4"
+bootstrap:
+  name: "bootstrap"
+  ipaddr: "192.168.0.151"
+masters:
+  - name: "master0"
+    ipaddr: "192.168.0.152"
+  - name: "master1"
+    ipaddr: "192.168.0.153"
+  - name: "master2"
+    ipaddr: "192.168.0.154"
+workers:
+  - name: "worker0"
+    ipaddr: "192.168.0.155"
+  - name: "worker1"
+    ipaddr: "192.168.0.156"
+  - name: "worker2"
+    ipaddr: "192.168.0.157"
+other:
+  - name: "non-cluster-vm"
+    ipaddr: "192.168.0.160"

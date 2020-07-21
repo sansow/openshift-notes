@@ -13,6 +13,7 @@ tkn pipeline list
 tkn pipeline logs -f
 ```
 
+doitlive play session.sh -s 3
 
 
 
