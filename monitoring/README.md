@@ -1,3 +1,4 @@
+```
 oc create -f prometheus-example-app.yaml
 oc expose service  prometheus-example-app -n ns1
 
@@ -12,4 +13,4 @@ oc create -f example-app-alerting-rule.yaml
 oc -n ns1 get PrometheusRule
 
 check metrics at `/metrics` endpoint
-entry query in dev console `http_requests_total{job="prometheus-example-app"}`
+entry query in dev console `http_requests_total{job="prometheus-example-app"}````
