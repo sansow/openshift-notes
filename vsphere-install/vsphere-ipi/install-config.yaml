@@ -1,0 +1,40 @@
+apiVersion: v1
+baseDomain: example.com
+compute:
+- hyperthreading: Enabled
+  name: worker
+  replicas: 2
+  platform:
+    vsphere:
+      cpus: 4
+      coresPerSocket: 2
+      memoryMB: 24576
+      osDisk:
+        diskSizeGB: 120
+controlPlane:
+  hyperthreading: Enabled
+  name: master
+  replicas: 3
+  platform:
+    vsphere:
+      cpus: 4
+      coresPerSocket: 2
+      memoryMB: 16384
+      osDisk:
+        diskSizeGB: 120
+metadata:
+  name: ocp4
+platform:
+  vsphere:
+    vcenter: 192.168.0.111
+    username: administrator@sso.local
+    password: your_password
+    datacenter: dc
+    defaultDatastore: datastore1
+    network: 'VM Network'
+    cluster: ipi
+    apiVIP: 192.168.0.161
+    ingressVIP: 192.168.0.162
+fips: False
+pullSecret: 'your_secret'
+
