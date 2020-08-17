@@ -23,7 +23,7 @@ oc apply -f https://raw.githubusercontent.com/Maistra/istio/maistra-1.2/samples/
 oc create -f https://raw.githubusercontent.com/Maistra/istio/maistra-1.2/samples/bookinfo/networking/bookinfo-gateway.yaml
 oc get routes -n istio-system istio-ingressgateway
 
-export INGRESS_HOST=<HOST>
+export INGRESS_HOST=$(oc get route -n istio-system istio-ingressgateway -o jsonpath='{.spec.host}')
 
-for i in {1..20}; do sleep 0.5; curl -I $INGRESS_HOST/productpage; done
+for i in {1..100}; do sleep 0.5; curl -I $INGRESS_HOST/productpage; done
 ```
