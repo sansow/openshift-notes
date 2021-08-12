@@ -26,4 +26,8 @@ oc get routes -n istio-system istio-ingressgateway
 export INGRESS_HOST=$(oc get route -n istio-system istio-ingressgateway -o jsonpath='{.spec.host}')
 
 for i in {1..100}; do sleep 0.5; curl -I $INGRESS_HOST/productpage; done
+
+
+oc apply -f https://raw.githubusercontent.com/maistra/istio/maistra-1.2/samples/bookinfo/networking/destination-rule-reviews.yaml
+ oc apply -f https://raw.githubusercontent.com/maistra/istio/maistra-1.2/samples/bookinfo/networking/virtual-service-reviews-v2-v3.yaml
 ```
